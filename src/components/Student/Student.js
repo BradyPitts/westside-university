@@ -9,7 +9,7 @@ export default class Student extends Component {
   }
 
   componentDidMount(){
-    return axios.get(`http://localhost:3005/students/${this.props.match.params.id}`)
+    axios.get(`http://localhost:3005/students/${this.props.match.params.id}`)
     .then( res =>{
       this.setState({
         studentInfo: res.data
